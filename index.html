@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranium Atom - 3D Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="question-mark" id="question-mark">?</div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-sidebar">×</button>
+        <h2>Uranium Atom [ U ]</h2>
+        <p><strong>Element:</strong> Uranium</p>
+        <p><strong>Atomic Number:</strong> 92</p>
+        <p><strong>Protons:</strong> 92</p>
+        <p><strong>Neutrons:</strong> 146</p>
+        <h3>Electron Configuration:</h3>
+        <p>Uranium has an electron configuration of <strong>[Rn] 5f<sup>3</sup> 6d<sup>1</sup> 7s<sup>2</sup></strong></p>
+        <h3>How the Model Was Calculated:</h3>
+        <p>The particle positions and cloud densities are based on approximations of atomic structure, including the distribution of protons, neutrons, and electrons.</p>
+        <p>Uranium is a radioactive element found naturally in the Earth's crust. It has a high atomic number and is known for its use as fuel in nuclear reactors and weapons. The uranium atom in this model has 92 protons, 92 electrons, and typically 146 neutrons.</p>
+    
+        <h3>Quantum Mechanical Model</h3>
+        <p>This uranium atom is represented using the <strong>cloud electron model</strong>, a quantum mechanical approach to understanding atomic structure. In this visualization, the uranium atom is modeled using Schrödinger's wave equation, which provides a probabilistic understanding of where electrons are likely to be found around the nucleus.</p>
+    
+        <h4>About the Electron Cloud</h4>
+        <p>The cloud model is rooted in <strong>quantum mechanics</strong>, a branch of physics that describes the behavior of subatomic particles, like electrons, using probabilities. Schrödinger’s equation, one of the core foundations of quantum theory, allows us to calculate the wave function of electrons, which tells us their probable locations in the atom. But electrons are <strong>too fast and small</strong> to be pinned down at any exact location. Instead, quantum mechanics gives us a probability distribution, often visualized as an electron cloud.</p>
+    
+        <p>In essence, electrons are not simply particles orbiting the nucleus in defined paths (as earlier atomic models suggested), but rather they exist in a cloud of probability. This cloud shows where an electron is likely to be, but it doesn’t give an exact answer. The electrons move so fast that we can't pinpoint their exact positions at any given moment. Instead, they are described as a cloud of probable locations, which gives us the distinctive electron "cloud" visualization you see here.<br> ‎</p>
+    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="atom.js"></script>
+    <script>
+        const questionMark = document.getElementById('question-mark');
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebar = document.getElementById('close-sidebar');
+
+        questionMark.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

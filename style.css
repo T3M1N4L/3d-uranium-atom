@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --mauve: #C6A0F6;
+    --pink: #F38BA8;
+    --peach: #F9E2AF;
+    --green: #C6A0F6;
+    --yellow: #F9E2AF;
+    --blue: #89B4FA;
+    --white: #F2D3E4;
+    --black: #1e1e2e;
+    --gray: #cdd6f4;
+    --lavender: #D9A0FF;
+    --rosewater: #ffc8b8;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:'inter', sans-serif;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.question-mark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--blue);
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.question-mark:hover {
+    opacity: 0.7;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fully hide the sidebar */
+    width: 300px;
+    height: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
+    border-right: var(--gray);
+}
+
+.sidebar.open {
+    right: 0; /* Slide in */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--blue);
+}
+
+.sidebar p {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.sidebar strong {
+    color: var(--pink);
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--green);
+}
+
+/* New styles for the close button in the sidebar */
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--rosewater);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sidebar .close-btn:hover {
+    color: var(--pink);
+}
