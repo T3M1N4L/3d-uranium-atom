@@ -1,0 +1,709 @@
+{
+    "atoms": [
+      {
+        "name": "Hydrogen",
+        "protons": 1,
+        "neutrons": 0,
+        "electrons": 1,
+        "electronShells": [1],
+        "shellRadii": [2.0]
+      },
+      {
+        "name": "Helium",
+        "protons": 2,
+        "neutrons": 2,
+        "electrons": 2,
+        "electronShells": [2],
+        "shellRadii": [1.5]
+      },
+      {
+        "name": "Lithium",
+        "protons": 3,
+        "neutrons": 4,
+        "electrons": 3,
+        "electronShells": [2, 1],
+        "shellRadii": [1.2, 0.8]
+      },
+      {
+        "name": "Beryllium",
+        "protons": 4,
+        "neutrons": 5,
+        "electrons": 4,
+        "electronShells": [2, 2],
+        "shellRadii": [1.1, 0.5]
+      },
+      {
+        "name": "Boron",
+        "protons": 5,
+        "neutrons": 6,
+        "electrons": 5,
+        "electronShells": [2, 3],
+        "shellRadii": [1.0, 0.5]
+      },
+      {
+        "name": "Carbon",
+        "protons": 6,
+        "neutrons": 6,
+        "electrons": 6,
+        "electronShells": [2, 4],
+        "shellRadii": [0.8, 0.5]
+      },
+      {
+        "name": "Nitrogen",
+        "protons": 7,
+        "neutrons": 7,
+        "electrons": 7,
+        "electronShells": [2, 5],
+        "shellRadii": [0.7, 0.4]
+      },
+      {
+        "name": "Oxygen",
+        "protons": 8,
+        "neutrons": 8,
+        "electrons": 8,
+        "electronShells": [2, 6],
+        "shellRadii": [0.6, 0.4]
+      },
+      {
+        "name": "Fluorine",
+        "protons": 9,
+        "neutrons": 10,
+        "electrons": 9,
+        "electronShells": [2, 7],
+        "shellRadii": [0.5, 0.3]
+      },
+      {
+        "name": "Neon",
+        "protons": 10,
+        "neutrons": 10,
+        "electrons": 10,
+        "electronShells": [2, 8],
+        "shellRadii": [0.5, 0.3]
+      },
+      {
+        "name": "Sodium",
+        "protons": 11,
+        "neutrons": 12,
+        "electrons": 11,
+        "electronShells": [2, 8, 1],
+        "shellRadii": [0.5, 0.3, 0.8]
+      },
+      {
+        "name": "Magnesium",
+        "protons": 12,
+        "neutrons": 12,
+        "electrons": 12,
+        "electronShells": [2, 8, 2],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Aluminum",
+        "protons": 13,
+        "neutrons": 14,
+        "electrons": 13,
+        "electronShells": [2, 8, 3],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Silicon",
+        "protons": 14,
+        "neutrons": 14,
+        "electrons": 14,
+        "electronShells": [2, 8, 4],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Phosphorus",
+        "protons": 15,
+        "neutrons": 16,
+        "electrons": 15,
+        "electronShells": [2, 8, 5],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Sulfur",
+        "protons": 16,
+        "neutrons": 16,
+        "electrons": 16,
+        "electronShells": [2, 8, 6],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Chlorine",
+        "protons": 17,
+        "neutrons": 18,
+        "electrons": 17,
+        "electronShells": [2, 8, 7],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Argon",
+        "protons": 18,
+        "neutrons": 22,
+        "electrons": 18,
+        "electronShells": [2, 8, 8],
+        "shellRadii": [0.5, 0.3, 0.7]
+      },
+      {
+        "name": "Potassium",
+        "protons": 19,
+        "neutrons": 20,
+        "electrons": 19,
+        "electronShells": [2, 8, 8, 1],
+        "shellRadii": [0.5, 0.3, 0.7, 1.2]
+      },
+      {
+        "name": "Calcium",
+        "protons": 20,
+        "neutrons": 20,
+        "electrons": 20,
+        "electronShells": [2, 8, 8, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Scandium",
+        "protons": 21,
+        "neutrons": 24,
+        "electrons": 21,
+        "electronShells": [2, 8, 9, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Titanium",
+        "protons": 22,
+        "neutrons": 26,
+        "electrons": 22,
+        "electronShells": [2, 8, 10, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Vanadium",
+        "protons": 23,
+        "neutrons": 28,
+        "electrons": 23,
+        "electronShells": [2, 8, 11, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Chromium",
+        "protons": 24,
+        "neutrons": 28,
+        "electrons": 24,
+        "electronShells": [2, 8, 13, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Manganese",
+        "protons": 25,
+        "neutrons": 30,
+        "electrons": 25,
+        "electronShells": [2, 8, 13, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Iron",
+        "protons": 26,
+        "neutrons": 30,
+        "electrons": 26,
+        "electronShells": [2, 8, 14, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Cobalt",
+        "protons": 27,
+        "neutrons": 32,
+        "electrons": 27,
+        "electronShells": [2, 8, 15, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Nickel",
+        "protons": 28,
+        "neutrons": 31,
+        "electrons": 28,
+        "electronShells": [2, 8, 16, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Copper",
+        "protons": 29,
+        "neutrons": 35,
+        "electrons": 29,
+        "electronShells": [2, 8, 18, 1],
+        "shellRadii": [0.5, 0.3, 0.7, 1.2]
+      },
+      {
+        "name": "Zinc",
+        "protons": 30,
+        "neutrons": 35,
+        "electrons": 30,
+        "electronShells": [2, 8, 18, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Gallium",
+        "protons": 31,
+        "neutrons": 38,
+        "electrons": 31,
+        "electronShells": [2, 8, 18, 3],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Germanium",
+        "protons": 32,
+        "neutrons": 41,
+        "electrons": 32,
+        "electronShells": [2, 8, 18, 4],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Arsenic",
+        "protons": 33,
+        "neutrons": 42,
+        "electrons": 33,
+        "electronShells": [2, 8, 18, 5],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Selenium",
+        "protons": 34,
+        "neutrons": 45,
+        "electrons": 34,
+        "electronShells": [2, 8, 18, 6],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Bromine",
+        "protons": 35,
+        "neutrons": 45,
+        "electrons": 35,
+        "electronShells": [2, 8, 18, 7],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Krypton",
+        "protons": 36,
+        "neutrons": 48,
+        "electrons": 36,
+        "electronShells": [2, 8, 18, 8],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0]
+      },
+      {
+        "name": "Rubidium",
+        "protons": 37,
+        "neutrons": 48,
+        "electrons": 37,
+        "electronShells": [2, 8, 18, 8, 1],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5]
+      },
+      {
+        "name": "Strontium",
+        "protons": 38,
+        "neutrons": 50,
+        "electrons": 38,
+        "electronShells": [2, 8, 18, 8, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.4]
+      },
+      {
+        "name": "Yttrium",
+        "protons": 39,
+        "neutrons": 50,
+        "electrons": 39,
+        "electronShells": [2, 8, 18, 9, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.4]
+      },
+      {
+        "name": "Zirconium",
+        "protons": 40,
+        "neutrons": 51,
+        "electrons": 40,
+        "electronShells": [2, 8, 18, 10, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Niobium",
+        "protons": 41,
+        "neutrons": 52,
+        "electrons": 41,
+        "electronShells": [2, 8, 18, 12, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Molybdenum",
+        "protons": 42,
+        "neutrons": 54,
+        "electrons": 42,
+        "electronShells": [2, 8, 18, 12, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Technetium",
+        "protons": 43,
+        "neutrons": 55,
+        "electrons": 43,
+        "electronShells": [2, 8, 18, 13, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Ruthenium",
+        "protons": 44,
+        "neutrons": 57,
+        "electrons": 44,
+        "electronShells": [2, 8, 18, 14, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Rhodium",
+        "protons": 45,
+        "neutrons": 58,
+        "electrons": 45,
+        "electronShells": [2, 8, 18, 15, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Palladium",
+        "protons": 46,
+        "neutrons": 60,
+        "electrons": 46,
+        "electronShells": [2, 8, 18, 18, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Silver",
+        "protons": 47,
+        "neutrons": 61,
+        "electrons": 47,
+        "electronShells": [2, 8, 18, 18, 3],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Cadmium",
+        "protons": 48,
+        "neutrons": 64,
+        "electrons": 48,
+        "electronShells": [2, 8, 18, 18, 4],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Indium",
+        "protons": 49,
+        "neutrons": 66,
+        "electrons": 49,
+        "electronShells": [2, 8, 18, 18, 5],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Tin",
+        "protons": 50,
+        "neutrons": 69,
+        "electrons": 50,
+        "electronShells": [2, 8, 18, 18, 6],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Tin",
+        "protons": 50,
+        "neutrons": 69,
+        "electrons": 50,
+        "electronShells": [2, 8, 18, 18, 6],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Antimony",
+        "protons": 51,
+        "neutrons": 69,
+        "electrons": 51,
+        "electronShells": [2, 8, 18, 18, 7],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Bismuth",
+        "protons": 52,
+        "neutrons": 83,
+        "electrons": 52,
+        "electronShells": [2, 8, 18, 18, 8],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.3]
+      },
+      {
+        "name": "Polonium",
+        "protons": 84,
+        "neutrons": 125,
+        "electrons": 84,
+        "electronShells": [2, 8, 18, 32, 18, 6],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Astatine",
+        "protons": 85,
+        "neutrons": 138,
+        "electrons": 85,
+        "electronShells": [2, 8, 18, 32, 18, 7],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Radon",
+        "protons": 86,
+        "neutrons": 136,
+        "electrons": 86,
+        "electronShells": [2, 8, 18, 32, 18, 8],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Francium",
+        "protons": 87,
+        "neutrons": 137,
+        "electrons": 87,
+        "electronShells": [2, 8, 18, 32, 18, 8, 1],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7, 2.0]
+      },
+      {
+        "name": "Radium",
+        "protons": 88,
+        "neutrons": 138,
+        "electrons": 88,
+        "electronShells": [2, 8, 18, 32, 18, 8, 2],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7, 2.0]
+      },
+      {
+        "name": "Actinium",
+        "protons": 89,
+        "neutrons": 138,
+        "electrons": 89,
+        "electronShells": [2, 8, 18, 32, 18, 9],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Thorium",
+        "protons": 90,
+        "neutrons": 142,
+        "electrons": 90,
+        "electronShells": [2, 8, 18, 32, 18, 10],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Protactinium",
+        "protons": 91,
+        "neutrons": 140,
+        "electrons": 91,
+        "electronShells": [2, 8, 18, 32, 20, 11],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Uranium",
+        "protons": 92,
+        "neutrons": 146,
+        "electrons": 92,
+        "electronShells": [2, 8, 18, 32, 21, 12],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Neptunium",
+        "protons": 93,
+        "neutrons": 144,
+        "electrons": 93,
+        "electronShells": [2, 8, 18, 32, 22, 13],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Plutonium",
+        "protons": 94,
+        "neutrons": 150,
+        "electrons": 94,
+        "electronShells": [2, 8, 18, 32, 24, 14],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Americium",
+        "protons": 95,
+        "neutrons": 151,
+        "electrons": 95,
+        "electronShells": [2, 8, 18, 32, 25, 15],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Curium",
+        "protons": 96,
+        "neutrons": 153,
+        "electrons": 96,
+        "electronShells": [2, 8, 18, 32, 25, 16],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Berkelium",
+        "protons": 97,
+        "neutrons": 155,
+        "electrons": 97,
+        "electronShells": [2, 8, 18, 32, 27, 17],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Californium",
+        "protons": 98,
+        "neutrons": 157,
+        "electrons": 98,
+        "electronShells": [2, 8, 18, 32, 28, 18],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Einsteinium",
+        "protons": 99,
+        "neutrons": 157,
+        "electrons": 99,
+        "electronShells": [2, 8, 18, 32, 29, 19],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Fermium",
+        "protons": 100,
+        "neutrons": 157,
+        "electrons": 100,
+        "electronShells": [2, 8, 18, 32, 30, 20],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Mendelevium",
+        "protons": 101,
+        "neutrons": 158,
+        "electrons": 101,
+        "electronShells": [2, 8, 18, 32, 31, 21],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Nobelium",
+        "protons": 102,
+        "neutrons": 159,
+        "electrons": 102,
+        "electronShells": [2, 8, 18, 32, 32, 22],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Lawrencium",
+        "protons": 103,
+        "neutrons": 160,
+        "electrons": 103,
+        "electronShells": [2, 8, 18, 32, 32, 23],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Rutherfordium",
+        "protons": 104,
+        "neutrons": 157,
+        "electrons": 104,
+        "electronShells": [2, 8, 18, 32, 32, 24],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Dubnium",
+        "protons": 105,
+        "neutrons": 162,
+        "electrons": 105,
+        "electronShells": [2, 8, 18, 32, 32, 25],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Seaborgium",
+        "protons": 106,
+        "neutrons": 163,
+        "electrons": 106,
+        "electronShells": [2, 8, 18, 32, 32, 26],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Bohrium",
+        "protons": 107,
+        "neutrons": 162,
+        "electrons": 107,
+        "electronShells": [2, 8, 18, 32, 32, 27],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Hassium",
+        "protons": 108,
+        "neutrons": 165,
+        "electrons": 108,
+        "electronShells": [2, 8, 18, 32, 32, 28],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Meitnerium",
+        "protons": 109,
+        "neutrons": 165,
+        "electrons": 109,
+        "electronShells": [2, 8, 18, 32, 32, 29],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Darmstadtium",
+        "protons": 110,
+        "neutrons": 169,
+        "electrons": 110,
+        "electronShells": [2, 8, 18, 32, 32, 30],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Roentgenium",
+        "protons": 111,
+        "neutrons": 169,
+        "electrons": 111,
+        "electronShells": [2, 8, 18, 32, 32, 31],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Copernicium",
+        "protons": 112,
+        "neutrons": 173,
+        "electrons": 112,
+        "electronShells": [2, 8, 18, 32, 32, 32],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Nihonium",
+        "protons": 113,
+        "neutrons": 173,
+        "electrons": 113,
+        "electronShells": [2, 8, 18, 32, 32, 33],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Flerovium",
+        "protons": 114,
+        "neutrons": 174,
+        "electrons": 114,
+        "electronShells": [2, 8, 18, 32, 32, 34],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Moscovium",
+        "protons": 115,
+        "neutrons": 174,
+        "electrons": 115,
+        "electronShells": [2, 8, 18, 32, 32, 35],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Livermorium",
+        "protons": 116,
+        "neutrons": 175,
+        "electrons": 116,
+        "electronShells": [2, 8, 18, 32, 32, 36],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Tennessine",
+        "protons": 117,
+        "neutrons": 177,
+        "electrons": 117,
+        "electronShells": [2, 8, 18, 32, 32, 37],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      },
+      {
+        "name": "Oganesson",
+        "protons": 118,
+        "neutrons": 177,
+        "electrons": 118,
+        "electronShells": [2, 8, 18, 32, 32, 38],
+        "shellRadii": [0.5, 0.3, 0.7, 1.0, 1.5, 1.7]
+      }
+    ]
+  }
+  

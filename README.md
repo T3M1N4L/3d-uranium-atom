@@ -21,6 +21,29 @@ The model includes:
 - **Sidebar Information:** Click on a question mark in the top right corner to open a sidebar with information about uranium, its electrons, protons, and neutrons, and how the model was calculated.
 - **Smooth Transitions:** The sidebar opens and closes with a smooth transition when clicking the question mark.
 
+## Customization
+
+You can easily modify the atom displayed by editing the JSON variables in the code. To change the atom, locate the `atomicBlueprint` object in the code, which contains the following properties:
+
+```JS
+const atomicBlueprint = {
+    protons: 92,   // Number of protons (e.g., Uranium)
+    neutrons: 146, // Number of neutrons
+    electrons: 92  // Number of electrons (for a neutral atom, this equals the number of protons)
+};
+```
+Simply change the values of `protons`, `neutrons`, and `electrons` to represent the desired atom. For example, to create a carbon atom, you would set:
+
+```JS
+
+const atomicBlueprint = {
+    protons: 6,
+    neutrons: 6,
+    electrons: 6
+};
+
+```
+
 ## Technologies Used
 
 - **Three.js:** A 3D JavaScript library used to render the uranium atom.

@@ -1,126 +1,143 @@
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor("#1e1e2e");
-document.body.appendChild(renderer.domElement);
+// Initiate a grand visual realm using Three.js
+const cosmicStage = new THREE.Scene();
+const opticalLens = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const visualSynthesizer = new THREE.WebGLRenderer({ antialias: true });
+visualSynthesizer.setSize(window.innerWidth, window.innerHeight);
+visualSynthesizer.setClearColor("#1e1e2e");
+document.body.appendChild(visualSynthesizer.domElement);
 
-const colors = {
-    base: "#89b4fa",
-    highlight: "#f38ba8",
-    glow: "#94e2d5"
+// Atomic structure parameters (protons, neutrons, electrons)
+const atomicBlueprint = {
+    protons: 92,   // Example: Uranium, can be modified
+    neutrons: 146, // Adjust as necessary
+    electrons: 92  // Neutral atom condition: protons = electrons
 };
 
-const nucleusGroup = new THREE.Group();
-const protonMaterial = new THREE.MeshStandardMaterial({ color: colors.highlight, emissive: colors.highlight });
-const neutronMaterial = new THREE.MeshStandardMaterial({ color: colors.base, emissive: colors.base });
+const colorPalette = {
+    primary: "#89b4fa",
+    accent: "#f38ba8",
+    luminescence: "#94e2d5"
+};
 
-for (let i = 0; i < 92; i++) {
-    const proton = new THREE.Mesh(new THREE.SphereGeometry(0.2304, 16, 16), protonMaterial);
-    proton.position.set(
-        Math.random() - 0.5,
-        Math.random() - 0.5,
-        Math.random() - 0.5
-    ).multiplyScalar(1.728);
-    nucleusGroup.add(proton);
+// Create a nucleus assembly
+const atomicNucleus = new THREE.Group();
+const protonMaterial = new THREE.MeshStandardMaterial({ color: colorPalette.accent, emissive: colorPalette.accent });
+const neutronMaterial = new THREE.MeshStandardMaterial({ color: colorPalette.primary, emissive: colorPalette.primary });
+
+// Populate the nucleus with protons
+for (let protonIndex = 0; protonIndex < atomicBlueprint.protons; protonIndex++) {
+    const protonSphere = new THREE.Mesh(new THREE.SphereGeometry(0.2304, 16, 16), protonMaterial);
+    protonSphere.position.set(
+        (Math.random() - 0.5) * 1.728,
+        (Math.random() - 0.5) * 1.728,
+        (Math.random() - 0.5) * 1.728
+    );
+    atomicNucleus.add(protonSphere);
 }
 
-for (let i = 0; i < 146; i++) {
-    const neutron = new THREE.Mesh(new THREE.SphereGeometry(0.2304, 16, 16), neutronMaterial);
-    neutron.position.set(
-        Math.random() - 0.5,
-        Math.random() - 0.5,
-        Math.random() - 0.5
-    ).multiplyScalar(1.728);
-    nucleusGroup.add(neutron);
+// Populate the nucleus with neutrons
+for (let neutronIndex = 0; neutronIndex < atomicBlueprint.neutrons; neutronIndex++) {
+    const neutronSphere = new THREE.Mesh(new THREE.SphereGeometry(0.2304, 16, 16), neutronMaterial);
+    neutronSphere.position.set(
+        (Math.random() - 0.5) * 1.728,
+        (Math.random() - 0.5) * 1.728,
+        (Math.random() - 0.5) * 1.728
+    );
+    atomicNucleus.add(neutronSphere);
 }
 
-scene.add(nucleusGroup);
+cosmicStage.add(atomicNucleus);
 
-const particleCount = 3000;
-const particlesGeometry = new THREE.BufferGeometry();
-const positions = new Float32Array(particleCount * 3);
+// Electron cloud particle system
+const totalParticles = 3000;
+const particleGeometry = new THREE.BufferGeometry();
+const particlePositions = new Float32Array(totalParticles * 3);
 
-for (let i = 0; i < particleCount; i++) {
-    const radius = 8.64 + Math.random() * 2.88;
-    const theta = Math.random() * 2 * Math.PI;
-    const phi = Math.acos(2 * Math.random() - 1);
+for (let particleIndex = 0; particleIndex < totalParticles; particleIndex++) {
+    const radialDistance = 8.64 + Math.random() * 2.88;
+    const azimuthalAngle = Math.random() * 2 * Math.PI;
+    const polarAngle = Math.acos(2 * Math.random() - 1);
 
-    const x = radius * Math.sin(phi) * Math.cos(theta);
-    const y = radius * Math.sin(phi) * Math.sin(theta);
-    const z = radius * Math.cos(phi);
+    const xCoord = radialDistance * Math.sin(polarAngle) * Math.cos(azimuthalAngle);
+    const yCoord = radialDistance * Math.sin(polarAngle) * Math.sin(azimuthalAngle);
+    const zCoord = radialDistance * Math.cos(polarAngle);
 
-    positions[i * 3] = x;
-    positions[i * 3 + 1] = y;
-    positions[i * 3 + 2] = z;
+    particlePositions[particleIndex * 3] = xCoord;
+    particlePositions[particleIndex * 3 + 1] = yCoord;
+    particlePositions[particleIndex * 3 + 2] = zCoord;
 }
 
-particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
 
-const particlesMaterial = new THREE.PointsMaterial({
-    color: colors.glow,
+const particleMaterial = new THREE.PointsMaterial({
+    color: colorPalette.luminescence,
     size: 0.0864,
     transparent: true,
     opacity: 0.9
 });
 
-const electronCloud = new THREE.Points(particlesGeometry, particlesMaterial);
-scene.add(electronCloud);
+const electronCloudFormation = new THREE.Points(particleGeometry, particleMaterial);
+cosmicStage.add(electronCloudFormation);
 
-const shellRadii = [5.76, 11.52, 17.28, 23.04, 28.8, 34.56, 39.36];
+// Define radii for electron shells
+const electronShellDistances = [5.76, 11.52, 17.28, 23.04, 28.8, 34.56, 39.36];
 
-function createElectronCloud(radius, particleCount) {
+function generateElectronCloud(radius, numParticles) {
     const cloudGeometry = new THREE.BufferGeometry();
-    const positions = [];
+    const cloudPositions = [];
 
-    for (let i = 0; i < particleCount; i++) {
-        const theta = Math.random() * Math.PI * 2;
-        const phi = Math.acos(1 - 2 * Math.random());
-        const r = radius * Math.pow(Math.random(), 1 / 3);
+    for (let particleIndex = 0; particleIndex < numParticles; particleIndex++) {
+        const azimuthalAngle = Math.random() * Math.PI * 2;
+        const polarAngle = Math.acos(1 - 2 * Math.random());
+        const adjustedRadius = radius * Math.pow(Math.random(), 1 / 3 );
 
-        positions.push(
-            r * Math.sin(phi) * Math.cos(theta),
-            r * Math.sin(phi) * Math.sin(theta),
-            r * Math.cos(phi)
+        cloudPositions.push(
+            adjustedRadius * Math.sin(polarAngle) * Math.cos(azimuthalAngle),
+            adjustedRadius * Math.sin(polarAngle) * Math.sin(azimuthalAngle),
+            adjustedRadius * Math.cos(polarAngle)
         );
     }
 
-    cloudGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-    return new THREE.Points(cloudGeometry, particlesMaterial);
+    cloudGeometry.setAttribute('position', new THREE.Float32BufferAttribute(cloudPositions, 3));
+    return new THREE.Points(cloudGeometry, particleMaterial);
 }
 
-const electronShells = [2, 8, 18, 32, 21, 9, 4];
-const electronClouds = electronShells.map((electrons, index) => {
-    const particleCount = (index === 6) ? 100 : 500; 
-    const cloud = createElectronCloud(shellRadii[index], particleCount);
-    scene.add(cloud);
-    return cloud;
+// Configuration for electron shells (number of electrons per shell)
+const electronShellConfigurations = [2, 8, 18, 32, 21, 9, 4];
+const electronCloudsArray = electronShellConfigurations.map((electronCount, shellIndex) => {
+    const particleCount = (shellIndex === 6) ? 100 : 500;  // Customize particle count
+    const cloudFormation = generateElectronCloud(electronShellDistances[shellIndex], particleCount);
+    cosmicStage.add(cloudFormation);
+    return cloudFormation;
 });
 
-const ringMaterial = new THREE.LineBasicMaterial({
+// Create orbital rings
+const orbitalRingMaterial = new THREE.LineBasicMaterial({
     color: '#cdd6f4',
     transparent: true,
     opacity: 0.3
 });
 
-const orbitalRings = shellRadii.map(radius => {
+const orbitalRingsArray = electronShellDistances.map(radius => {
     const ringGeometry = new THREE.RingGeometry(radius, radius + 0.1, 64);
-    const ring = new THREE.LineSegments(ringGeometry, ringMaterial);
-    ring.rotation.x = Math.PI / 2;
-    scene.add(ring);
-    return ring;
+    const orbitalRing = new THREE.LineSegments(ringGeometry, orbitalRingMaterial);
+    orbitalRing.rotation.x = Math.PI / 2;
+    cosmicStage.add(orbitalRing);
+    return orbitalRing;
 });
 
-const ambientLight = new THREE.AmbientLight(0x404040);
-scene.add(ambientLight);
+// Lighting setup
+const ambientLightSource = new THREE.AmbientLight(0x404040);
+cosmicStage.add(ambientLightSource);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(1, 1, 1);
-scene.add(directionalLight);
+const directionalLightSource = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLightSource.position.set(1, 1, 1);
+cosmicStage.add(directionalLightSource);
 
-camera.position.z = 14.4;
+// Position the camera
+opticalLens.position.z = 14.4;
 
-const controls = {
+const controlParameters = {
     mouseX: 0,
     mouseY: 0,
     targetX: 0,
@@ -128,28 +145,32 @@ const controls = {
 };
 
 document.addEventListener('mousemove', (event) => {
-    controls.mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-    controls.mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+    controlParameters.mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    controlParameters.mouseY = (event.clientY / window.innerHeight) * 2 - 1;
 });
 
-function animate() {
-    requestAnimationFrame(animate);
-    nucleusGroup.rotation.x += 0.01;
-    nucleusGroup.rotation.y += 0.01;
-    electronCloud.rotation.y += 0.002;
-    electronClouds.forEach((cloud, index) => {
+// Animation loop for rendering
+function renderAnimation() {
+    requestAnimationFrame(renderAnimation);
+    atomicNucleus.rotation.x += 0.01;
+    atomicNucleus.rotation.y += 0.01;
+    electronCloudFormation.rotation.y += 0.002;
+
+    electronCloudsArray.forEach((cloud, index) => {
         cloud.rotation.x += (index === 6 ? 0.001 : 0.002) * (index + 1); 
         cloud.rotation.y += (index === 6 ? 0.0005 : 0.001) * (index + 1); 
     });
-    orbitalRings.forEach((ring) => {
+
+    orbitalRingsArray.forEach((ring) => {
         ring.rotation.z += 0.01;
     });
-    controls.targetX += (controls.mouseX - controls.targetX) * 0.05;
-    controls.targetY += (controls.mouseY - controls.targetY) * 0.05;
-    camera.position.x = controls.targetX * 10;
-    camera.position.y = controls.targetY * 10;
-    camera.lookAt(0, 0, 0);
-    renderer.render(scene, camera);
+
+    controlParameters.targetX += (controlParameters.mouseX - controlParameters.targetX) * 0.05;
+    controlParameters.targetY += (controlParameters.mouseY - controlParameters.targetY) * 0.05;
+    opticalLens.position.x = controlParameters.targetX * 10;
+    opticalLens.position.y = controlParameters.targetY * 10;
+    opticalLens.lookAt(0, 0, 0);
+    visualSynthesizer.render(cosmicStage, opticalLens);
 }
 
-animate();
+renderAnimation(); 
